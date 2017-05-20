@@ -5,6 +5,7 @@ import TextComponent from './components/text/text.component';
 import ButtonComponent from './components/button/button.component';
 import UploadComponent from './components/upload/upload.component';
 import ImageComponent from './components/image/image.component';
+import MapComponent from './components/map/map.component';
 
 function init() {
 	appendComponents();
@@ -17,6 +18,8 @@ function appendComponents() {
 		button: ButtonComponent,
 		upload: UploadComponent,
 		image: ImageComponent,
+		map: MapComponent,
+
 		call: (type, params) => {
 			let Component = MapComponents[type];
 

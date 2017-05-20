@@ -41,7 +41,12 @@ export default class TextComponent {
 
         if (this.options.type.indexOf('address') !== -1) {
             autocomplete = new google.maps.places.Autocomplete(this.elements.input, { types: ['geocode'] });
-            autocomplete.addListener('place_changed', () => { console.log(autocomplete.getPlace()) });
+            autocomplete.addListener('place_changed', () => {
+                let location = autocomplete.getPlace().geometry.location;
+                let lat = location.lat();
+                let lng = location.lng();
+
+            });
         }
     }
 
