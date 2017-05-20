@@ -5,9 +5,13 @@
 import googleMock from '../../../__mocks__/google';
 import TextComponent from './text.component';
 
-test('should change name', () => {
-    let element = document.createElement('div');
+let element;
 
+beforeEach(() => {
+    element = document.createElement('div');
+});
+
+test('should change name', () => {
     let text = new TextComponent({
         "name": "txtFullname",
         "id": "txtFullname",
@@ -28,8 +32,6 @@ test('should change name', () => {
 });
 
 test('should validate invalid cpf mask', () => {
-    let element = document.createElement('div');
-
     let text = new TextComponent({
         "name": "txtFullname",
         "id": "txtFullname",
@@ -50,8 +52,6 @@ test('should validate invalid cpf mask', () => {
 });
 
 test('should validate mask', () => {
-    let element = document.createElement('div');
-
     let text = new TextComponent({
         "name": "txtFullname",
         "id": "txtFullname",

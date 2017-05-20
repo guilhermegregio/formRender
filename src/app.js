@@ -2,6 +2,7 @@ require('babel-polyfill');
 
 import jsonRequest from './assets/mock.json';
 import TextComponent from './components/text/text.component';
+import ButtonComponent from './components/button/button.component';
 
 function init() {
 	appendComponents();
@@ -11,6 +12,7 @@ function appendComponents() {
 
 	let MapComponents = {
 		text: TextComponent,
+		button: ButtonComponent,
 		call: (type, params) => {
 			let Component = MapComponents[type];
 

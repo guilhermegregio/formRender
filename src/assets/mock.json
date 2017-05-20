@@ -59,7 +59,7 @@
 			"type": "button",
 			"name": "btnSave",
 			"id": "btnSave",
-			"value": "",
+			"value": "Gravar",
 			"class": "input"
 		}
 	]
