@@ -1,0 +1,45 @@
+{
+  "name": "form-render",
+  "version": "0.0.1",
+  "description": "App to render html by json",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress --hot",
+    "build": "rimraf dist && webpack --bail --progress --profile",
+    "test": "jest --watch"
+  },
+  "author": "Guilherme M Gregio <guilherme@gregio.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nteract/mockument": "^1.0.4",
+    "autoprefixer": "^7.1.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "jest": "^20.0.3",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.5",
+    "postcss-mixins": "^6.0.0",
+    "progress-bar-webpack-plugin": "^1.9.3",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "jest": {
+    "setupFiles": ["@nteract/mockument"],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileTransform.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  }
+}
