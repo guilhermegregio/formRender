@@ -1,3 +1,4 @@
+import { buildRegExpByMask, fragmentFromString } from '../../infraestructure';
 import style from './text.style.scss';
 
 export default class TextComponent {
@@ -62,27 +63,8 @@ export default class TextComponent {
             return true;
         }
 
-        let er = buildMaskRegExp(this.options.mask);
+        let er = buildRegExpByMask(this.options.mask);
 
         return er.test(this.elements.input.value);
     }
-}
-
-function fragmentFromString(strHTML) {
-    return document.createRange().createContextualFragment(strHTML);
-}
-
-function buildMaskRegExp(mask) {
-
-    mask = mask
-        .replace(/0/g, '\\d')
-        .replace(/\./g, '\\.')
-        .replace(/\$/g, '\\$')
-        .replace(/\^/g, '\\^')
-        .replace(/\[/g, '\\[')
-        .replace(/\]/g, '\\]')
-        .replace(/\(/g, '\\(')
-        .replace(/\)/g, '\\)');
-
-    return new RegExp(mask, 'g');
 }

@@ -1,3 +1,4 @@
+import { fragmentFromString } from '../../infraestructure';
 import style from './button.style.scss';
 
 export default class ButtonComponent {
@@ -40,8 +41,4 @@ export default class ButtonComponent {
 
         this.elements = { root, input };
     }
-}
-
-function fragmentFromString(strHTML) {
-    return document.createRange().createContextualFragment(strHTML);
 }

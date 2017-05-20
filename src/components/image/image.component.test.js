@@ -1,3 +1,5 @@
+import localStorage from '../../../__mocks__/localStorage';
+
 import ImageComponent from './image.component';
 
 let element;
@@ -18,5 +20,5 @@ test('should create simple button', () => {
 
     let img = element.querySelector('.image-component img');
 
-    expect(input.name).toBe('uplImage');
+    expect(img.src).toBe("");
 });

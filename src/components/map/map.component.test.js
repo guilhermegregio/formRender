@@ -1,3 +1,4 @@
+import googleMock from '../../../__mocks__/google';
 import MapComponent from './map.component';
 
 let element;
@@ -16,8 +17,8 @@ test('should create simple map', () => {
 
     map.appendTo(element);
 
-    let input = element.querySelector('.map-component input');
+    let rootElement = element.querySelector('div');
 
-    expect(input.type).toBe('button');
-    expect(input.value).toBe('Gravar');
+    
+    expect(rootElement.className).toEqual(expect.stringContaining('map-component'));
 });

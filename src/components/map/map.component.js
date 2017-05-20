@@ -1,3 +1,4 @@
+import { fragmentFromString } from '../../infraestructure';
 import style from './map.style.scss';
 
 export default class MapComponent {
@@ -37,8 +38,4 @@ export default class MapComponent {
 
         this.elements = { root };
     }
-}
-
-function fragmentFromString(strHTML) {
-    return document.createRange().createContextualFragment(strHTML);
 }

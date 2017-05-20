@@ -1,3 +1,5 @@
+import localStorage from '../../../__mocks__/localStorage';
+
 import UploadComponent from './upload.component';
 
 let element;

@@ -1,3 +1,4 @@
+import { fragmentFromString } from '../../infraestructure';
 import style from './upload.style.scss';
 
 export default class UploadComponent {
@@ -48,8 +49,4 @@ export default class UploadComponent {
 
         this.elements = { root, input };
     }
-}
-
-function fragmentFromString(strHTML) {
-    return document.createRange().createContextualFragment(strHTML);
 }

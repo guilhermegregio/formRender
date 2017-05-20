@@ -1,3 +1,4 @@
+import { fragmentFromString } from '../../infraestructure';
 import style from './image.style.scss';
 
 export default class ImageComponent {
@@ -31,19 +32,15 @@ export default class ImageComponent {
     binds() {
         let image = localStorage.getItem('imgData');
 
-        if (image.match(/data:image/)) {
+        if (image && image.match(/data:image/)) {
             this.elements.img.src = image;
         }
     }
 
     setElements() {
-        let root = this.container.querySelector('.text-component');
+        let root = this.container.querySelector('.image-component');
         let img = this.container.querySelector('img');
 
         this.elements = { root, img };
     }
-}
-
-function fragmentFromString(strHTML) {
-    return document.createRange().createContextualFragment(strHTML);
 }
