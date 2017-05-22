@@ -1,7 +1,9 @@
 window.google = {
     maps: {
         places: {
-            Autocomplete: class { }
+            Autocomplete: class { 
+                addListener(){}
+            }
         },
         Map: class { }
     }
