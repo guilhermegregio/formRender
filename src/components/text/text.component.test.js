@@ -25,7 +25,6 @@ test('should change name', () => {
     changeValue(input, 'Guilherme')
 
 
-    expect(text.changed).toBe(true);
     expect(input.value).toBe('Guilherme');
 });
 

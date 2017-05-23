@@ -15,7 +15,7 @@ export default class ButtonComponent {
     renderTemplate() {
         let template = `
             <div class="button-component group ${this.options.class}">
-                <button type="button" class="button primary">
+                <button type="button" class="button primary" value="${this.options.value}">
                     <span class="load fa fa-spinner"></span>
                     <span class="value">${this.options.value}</span>
                 </button>

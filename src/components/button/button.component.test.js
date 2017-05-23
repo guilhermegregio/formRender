@@ -17,8 +17,8 @@ test('should create simple button', () => {
 
     button.appendTo(element);
 
-    let input = element.querySelector('.button-component input');
+    let input = element.querySelector('.button-component button');
 
-    expect(input.type).toBe('button');
+    expect(input.tagName).toBe('BUTTON');
     expect(input.value).toBe('Gravar');
 });
