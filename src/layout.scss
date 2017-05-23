@@ -54,6 +54,10 @@ input {
     border-bottom: 1px solid #757575;
 }
 
+.invalid input {
+    border-bottom: 1px solid red;
+}
+
 input:focus {
     outline: none;
 }

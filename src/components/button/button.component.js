@@ -15,7 +15,10 @@ export default class ButtonComponent {
     renderTemplate() {
         let template = `
             <div class="button-component group ${this.options.class}">
-                <input id="${this.options.id}" name="${this.options.name}" type="button" value="${this.options.value}" />
+                <button type="button" class="button primary">
+                    <span class="load fa fa-spinner"></span>
+                    <span class="value">${this.options.value}</span>
+                </button>
             </div>
         `;
 
@@ -40,8 +43,8 @@ export default class ButtonComponent {
     }
 
     setElements() {
-        let root = this.container.querySelector('.text-component');
-        let input = this.container.querySelector('input');
+        let root = this.container.querySelector('.button-component');
+        let input = this.container.querySelector('button');
 
         this.elements = { root, input };
     }
@@ -49,22 +52,26 @@ export default class ButtonComponent {
     submit() {
         let defaultSubmit = new DefaultSubmit();
 
+        this.elements.input.classList.add('work');
         if (defaultSubmit.valid()) {
             defaultSubmit.submit();
+            this.elements.input.classList.remove('work');
         } else {
             alert('Algum dado inválido!');
+            this.elements.input.classList.remove('work');
+
         }
     }
 
-    validate(){
+    validate() {
         return true;
     }
 
-    getKey(){
+    getKey() {
         return '';
     }
 
-    getValue(){
+    getValue() {
         return '';
     }
 }

@@ -5,7 +5,6 @@ export default class TextComponent {
     constructor(options) {
         this.options = options || {};
         this.container = document.createDocumentFragment();
-        this.changed = false;
         this.elements = {};
     }
 
@@ -36,7 +35,6 @@ export default class TextComponent {
         let autocomplete;
 
         this.elements.input.addEventListener('change', () => {
-            this.changed = true;
             this.elements.root.classList.remove('invalid');
             if (!this.validate()) {
                 this.elements.root.classList.add('invalid');
