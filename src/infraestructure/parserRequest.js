@@ -1,4 +1,5 @@
 import { TextComponent, ButtonComponent, UploadComponent, ImageComponent, MapComponent } from '../components';
+import ComponentRegister from './componentRegister';
 
 export default class ParserRequest {
     constructor(request) {
@@ -32,6 +33,6 @@ let MapComponents = {
             };
         }
 
-        return new Component(field);
+        return ComponentRegister.getRegister().registry(new Component(field));
     }
 };
