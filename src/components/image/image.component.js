@@ -11,7 +11,7 @@ export default class ImageComponent {
 
     renderTemplate() {
         let template = `
-            <div class="image-component ${this.options.class}">
+            <div class="image-component group ${this.options.class}">
                 <img name="${this.options.name}" />
             </div>
         `;

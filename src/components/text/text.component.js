@@ -11,8 +11,11 @@ export default class TextComponent {
 
     renderTemplate() {
         let template = `
-            <div class="text-component ${this.options.class}">
-                <label>${this.options.name}: </label><input id="${this.options.id}" name="${this.options.name}" type="text" value="${this.options.value}" />
+            <div class="text-component group ${this.options.class}">
+                <input id="${this.options.id}" name="${this.options.name}" type="text" value="${this.options.value}" placeholder="" required/>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>${this.options.name}:</label>
             </div>
         `;
 

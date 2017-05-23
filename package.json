@@ -1,7 +1,7 @@
 {
   "name": "form-render",
   "version": "0.0.1",
-  "description": "App to render html by json",
+  "description": "Form Render JSON",
   "main": "index.js",
   "scripts": {
     "start": "npm run server",

@@ -10,7 +10,7 @@ export default class MapComponent {
     }
 
     renderTemplate() {
-        let template = `<div class="map-component ${this.options.class}"></div>`;
+        let template = `<div class="map-component group ${this.options.class}"></div>`;
 
         return template;
     }
