@@ -1,4 +1,4 @@
-import { buildRegExpByMask, fragmentFromString } from '../../infraestructure';
+import { buildRegExpByMask, fragmentFromString, localStorageWraper } from '../../infraestructure';
 import style from './text.style.scss';
 
 export default class TextComponent {
@@ -47,6 +47,8 @@ export default class TextComponent {
                 let location = place.geometry.location;
                 let lat = location.lat();
                 let lng = location.lng();
+
+                localStorageWraper.setItem("lat-lng", JSON.stringify({ lat, lng }));
             });
         }
     }
