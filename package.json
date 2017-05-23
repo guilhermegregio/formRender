@@ -7,7 +7,10 @@
     "start": "npm run server",
     "server": "webpack-dev-server --history-api-fallback --inline --progress --hot",
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test-e2e": "protractor protractor.conf.js",
+    "webdrive-update": "webdriver-manager update",
+    "webdrive-start": "webdriver-manager start"
   },
   "author": "Guilherme M Gregio <guilherme@gregio.net>",
   "license": "MIT",
@@ -32,11 +35,14 @@
     "progress-bar-webpack-plugin": "^1.9.3",
     "rimraf": "^2.6.1",
     "style-loader": "^0.17.0",
+    "walnutjs": "^1.0.27",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
   "jest": {
-    "setupFiles": ["@nteract/mockument"],
+    "setupFiles": [
+      "@nteract/mockument"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileTransform.js",
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
