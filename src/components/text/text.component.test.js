@@ -1,8 +1,6 @@
-/**
-* @jest-environment jsdom
-*/
-
+import localStorageMock from '../../../__mocks__/localStorage';
 import googleMock from '../../../__mocks__/google';
+
 import TextComponent from './text.component';
 
 let element;

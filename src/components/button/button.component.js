@@ -1,3 +1,4 @@
+import localStorageMock from '../../../__mocks__/localStorage';
 import { fragmentFromString } from '../../infraestructure';
 import DefaultSubmit from '../../application/defaultSubmit';
 
@@ -13,7 +14,7 @@ export default class ButtonComponent {
 
     renderTemplate() {
         let template = `
-            <div class="button-component ${this.options.class}">
+            <div class="button-component group ${this.options.class}">
                 <input id="${this.options.id}" name="${this.options.name}" type="button" value="${this.options.value}" />
             </div>
         `;

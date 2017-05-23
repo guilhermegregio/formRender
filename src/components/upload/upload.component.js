@@ -11,7 +11,7 @@ export default class UploadComponent {
 
     renderTemplate() {
         let template = `
-            <div class="upload-component ${this.options.class}">
+            <div class="upload-component group ${this.options.class}">
                 <input id="${this.options.id}" name="${this.options.name}" type="file" />
             </div>
         `;
