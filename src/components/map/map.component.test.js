@@ -1,4 +1,6 @@
 import googleMock from '../../../__mocks__/google';
+import localStorageMock from '../../../__mocks__/localStorage';
+
 import MapComponent from './map.component';
 
 let element;

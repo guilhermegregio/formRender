@@ -1,3 +1,4 @@
+import localStorageMock from '../../../__mocks__/localStorage';
 import { fragmentFromString } from '../../infraestructure';
 import DefaultSubmit from '../../application/defaultSubmit';
 

@@ -1,4 +1,4 @@
-import localStorage from '../../../__mocks__/localStorage';
+import localStorageMock from '../../../__mocks__/localStorage';
 
 import UploadComponent from './upload.component';
 

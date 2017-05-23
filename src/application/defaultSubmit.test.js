@@ -1,7 +1,7 @@
+import localStorageMock from '../../__mocks__/localStorage';
+
 import DefaultSubmit from './defaultSubmit';
 import ComponentRegister from '../infraestructure/componentRegister';
-
-import localStorageMock from '../../__mocks__/localStorage';
 
 class MockComponent {
     constructor(key, value, valid) {
@@ -53,5 +53,5 @@ test('should save form', () => {
 
     defaultSubmit.submit();
 
-    expect(localStorage.getItem('formData')).toBe(JSON.stringify([{ key1: 'Teste' }]));
+    expect(window.localStorage.getItem('formData')).toBe(JSON.stringify([{ key1: 'Teste' }]));
 });
