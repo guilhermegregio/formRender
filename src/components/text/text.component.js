@@ -1,4 +1,4 @@
-import { buildRegExpByMask, fragmentFromString } from '../../infraestructure';
+import { buildRegExpByMask, fragmentFromString, localStorageWraper } from '../../infraestructure';
 import style from './text.style.scss';
 
 export default class TextComponent {
@@ -43,10 +43,12 @@ export default class TextComponent {
         if (this.options.type.indexOf('address') !== -1) {
             autocomplete = new google.maps.places.Autocomplete(this.elements.input, { types: ['geocode'] });
             autocomplete.addListener('place_changed', () => {
-                let location = autocomplete.getPlace().geometry.location;
+                let place = autocomplete.getPlace();
+                let location = place.geometry.location;
                 let lat = location.lat();
                 let lng = location.lng();
 
+                localStorageWraper.setItem("lat-lng", JSON.stringify({ lat, lng }));
             });
         }
     }
@@ -66,5 +68,13 @@ export default class TextComponent {
         let er = buildRegExpByMask(this.options.mask);
 
         return er.test(this.elements.input.value);
+    }
+
+    getKey() {
+        return this.options.id;
+    }
+
+    getValue() {
+        return this.elements.input.value;
     }
 }

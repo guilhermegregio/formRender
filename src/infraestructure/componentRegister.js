@@ -18,6 +18,10 @@ class ComponentRegister {
 
         return componentInstance;
     }
+
+    clean(){
+        this.components.length = 0;
+    }
 }
 
 

@@ -49,4 +49,16 @@ export default class UploadComponent {
 
         this.elements = { root, input };
     }
+
+    validate() {
+        return true;
+    }
+
+    getKey() {
+        return this.options.id;
+    }
+
+    getValue() {
+        return localStorage.getItem("imgData");
+    }
 }

@@ -43,4 +43,16 @@ export default class ImageComponent {
 
         this.elements = { root, img };
     }
+
+    validate(){
+        return true;
+    }
+
+    getKey(){
+        return '';
+    }
+
+    getValue(){
+        return '';
+    }
 }
