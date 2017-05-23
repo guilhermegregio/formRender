@@ -38,4 +38,16 @@ export default class MapComponent {
 
         this.elements = { root };
     }
+
+    validate(){
+        return true;
+    }
+
+    getKey(){
+        return '';
+    }
+
+    getValue(){
+        return '';
+    }
 }

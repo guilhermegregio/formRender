@@ -1,5 +1,5 @@
 import ComponentRegister from '../infraestructure/componentRegister';
-
+import { isEmptyObj } from '../infraestructure';
 const STORE_KEY = 'formData';
 
 export default class DefaultSubmit {
@@ -51,8 +51,11 @@ export default class DefaultSubmit {
     setFormData(data) {
         let formData = this.getFormData();
 
-        formData.push(data);
+        if (isEmptyObj(data)) {
+            return false;
+        }
 
+        formData.push(data);
         this.store.setItem(STORE_KEY, JSON.stringify(formData));
     }
 }

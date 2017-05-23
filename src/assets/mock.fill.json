@@ -1,0 +1,66 @@
+{
+	"fields": [
+		{
+			"name": "txtFullname",
+			"id": "txtFullname",
+			"value": "Guilherme",
+			"type": "text",
+			"class": "input"
+		},
+		{
+			"name": "txtCpf",
+			"id": "txtCpf",
+			"value": "329.080.118-75",
+			"type": "text",
+			"mask": "000.000.000-00",
+			"class": "input"
+		},
+		{
+			"name": "txtTelephone",
+			"id": "txtTelefone",
+			"value": "(11) 99248-9377",
+			"type": "text",
+			"mask": "(00) 00000-0000",
+			"class": "input"
+		},
+		{
+			"name": "txtAddress",
+			"id": "txtAddress",
+			"value": "",
+			"type": "text:address",
+			"class": "input"
+		},
+		{
+			"type": "map",
+			"name": "mapRenderer",
+			"id": "mapRenderer",
+			"class": "map-renderer"
+		},
+		{
+			"name": "txtComplement",
+			"id": "txtComplement",
+			"value": "186",
+			"type": "text",
+			"class": "input"
+		},
+		{
+			"type": "upload",
+			"name": "uplImage",
+			"id": "uplImage",
+			"class": "upload-button"
+		},
+		{
+			"type": "image",
+			"name": "imgAvatar",
+			"id": "imgAvatar",
+			"class": "image"
+		},
+		{
+			"type": "button",
+			"name": "btnSave",
+			"id": "btnSave",
+			"value": "Gravar",
+			"class": "input"
+		}
+	]
+}

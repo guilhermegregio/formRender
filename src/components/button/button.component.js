@@ -1,4 +1,6 @@
 import { fragmentFromString } from '../../infraestructure';
+import DefaultSubmit from '../../application/defaultSubmit';
+
 import style from './button.style.scss';
 
 export default class ButtonComponent {
@@ -31,7 +33,8 @@ export default class ButtonComponent {
 
     binds() {
         this.elements.input.addEventListener('click', () => {
-            console.log('clicked');
+
+            this.submit();
         }, true);
     }
 
@@ -40,5 +43,27 @@ export default class ButtonComponent {
         let input = this.container.querySelector('input');
 
         this.elements = { root, input };
+    }
+
+    submit() {
+        let defaultSubmit = new DefaultSubmit();
+
+        if (defaultSubmit.valid()) {
+            defaultSubmit.submit();
+        } else {
+            alert('Algum dado inválido!');
+        }
+    }
+
+    validate(){
+        return true;
+    }
+
+    getKey(){
+        return '';
+    }
+
+    getValue(){
+        return '';
     }
 }
