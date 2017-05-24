@@ -1,4 +1,4 @@
-import { fragmentFromString } from '../../infraestructure';
+import { fragmentFromString, localStorageWraper } from '../../infraestructure';
 import style from './image.style.scss';
 
 export default class ImageComponent {
@@ -30,8 +30,18 @@ export default class ImageComponent {
     }
 
     binds() {
-        let image = localStorage.getItem('imgData');
+        let image = localStorageWraper.getItem('imgData');
 
+        this.setImage(image);
+
+        document.addEventListener('itemInserted', (event) => {
+            if (event.detail.key === 'imgData') {
+                this.setImage(event.detail.value)
+            }
+        }, false);
+    }
+
+    setImage(image) {
         if (image && image.match(/data:image/)) {
             this.elements.img.src = image;
         }
@@ -44,15 +54,15 @@ export default class ImageComponent {
         this.elements = { root, img };
     }
 
-    validate(){
+    validate() {
         return true;
     }
 
-    getKey(){
+    getKey() {
         return '';
     }
 
-    getValue(){
+    getValue() {
         return '';
     }
 }

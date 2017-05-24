@@ -1,4 +1,4 @@
-import { fragmentFromString } from '../../infraestructure';
+import { fragmentFromString, localStorageWraper } from '../../infraestructure';
 import style from './upload.style.scss';
 
 export default class UploadComponent {
@@ -36,7 +36,7 @@ export default class UploadComponent {
             let fReader = new FileReader();
 
             fReader.onload = function () {
-                localStorage.setItem("imgData", fReader.result);
+                localStorageWraper.setItem("imgData", fReader.result);
             };
 
             fReader.readAsDataURL(file);
@@ -59,6 +59,6 @@ export default class UploadComponent {
     }
 
     getValue() {
-        return localStorage.getItem("imgData");
+        return localStorageWraper.getItem("imgData");
     }
 }
