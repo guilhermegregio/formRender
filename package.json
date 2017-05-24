@@ -9,6 +9,7 @@
     "build": "rimraf dist && webpack --bail --progress --profile",
     "test": "jest --watch",
     "test-e2e": "protractor protractor.conf.js",
+    "coverage": "jest --coverage",
     "webdrive-update": "webdriver-manager update",
     "webdrive-start": "webdriver-manager start"
   },
