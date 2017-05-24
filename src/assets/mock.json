@@ -1,0 +1,66 @@
+{
+	"fields": [
+		{
+			"name": "txtFullname",
+			"id": "txtFullname",
+			"value": "",
+			"type": "text",
+			"class": "input"
+		},
+		{
+			"name": "txtCpf",
+			"id": "txtCpf",
+			"value": "",
+			"type": "text",
+			"mask": "000.000.000-00",
+			"class": "input"
+		},
+		{
+			"name": "txtTelephone",
+			"id": "txtTelefone",
+			"value": "",
+			"type": "text",
+			"mask": "(00) 00000-0000",
+			"class": "input"
+		},
+		{
+			"name": "txtAddress",
+			"id": "txtAddress",
+			"value": "",
+			"type": "text:address",
+			"class": "input"
+		},
+		{
+			"type": "map",
+			"name": "mapRenderer",
+			"id": "mapRenderer",
+			"class": "map-renderer"
+		},
+		{
+			"name": "txtComplement",
+			"id": "txtComplement",
+			"value": "",
+			"type": "text",
+			"class": "input"
+		},
+		{
+			"type": "upload",
+			"name": "uplImage",
+			"id": "uplImage",
+			"class": "upload-button"
+		},
+		{
+			"type": "image",
+			"name": "imgAvatar",
+			"id": "imgAvatar",
+			"class": "image"
+		},
+		{
+			"type": "button",
+			"name": "btnSave",
+			"id": "btnSave",
+			"value": "Gravar",
+			"class": "input"
+		}
+	]
+}

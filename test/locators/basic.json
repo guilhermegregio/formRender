@@ -1,0 +1,34 @@
+{
+    "containers": [
+        {
+            "name": "FormRender",
+            "locators": [
+                {
+                    "key": "InputName",
+                    "type": "id",
+                    "value": "txtFullname"
+                },
+                {
+                    "key": "InputCpf",
+                    "type": "id",
+                    "value": "txtCpf"
+                },
+                {
+                    "key": "InputTelefone",
+                    "type": "id",
+                    "value": "txtTelefone"
+                },
+                {
+                    "key": "ButtonSave",
+                    "type": "id",
+                    "value": "btnSave"
+                },
+                {
+                    "key": "MessageLog",
+                    "type": "id",
+                    "value": "message-log"
+                }
+            ]
+        }
+    ]
+}

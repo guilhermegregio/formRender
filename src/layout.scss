@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* basic stylings ------------------------------------------ */
+
+body {}
+
+.container {
+    font-family: 'Roboto';
+    width: 600px;
+    margin: 30px auto 0;
+    display: block;
+    background: #FFF;
+    padding: 10px 50px 50px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 small {
+    font-weight: normal;
+    color: #888;
+    display: block;
+}
+
+.footer .footer-line {
+    text-align: center;
+}
+
+.footer a {
+    color: #53B2C8;
+}
+
+
+/* form starting stylings ------------------------------- */
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.message-log {
+    display: none;
+    margin: 0;
+    position: fixed;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.message-log.success {
+    display: block;
+    background-color: rgba(10, 80, 0, 0.9);
+    color: #fff;
+}
+
+.message-log.error {
+    display: block;
+    background-color: rgba(255, 150, 150, 0.9);
+}
+
+.message-log .close {
+    text-align: right;
+}
+
+.message-log .link {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.message-log .link:focus {
+    outline: none;
+}
