@@ -1,4 +1,6 @@
 import { buildRegExpByMask, fragmentFromString, localStorageWraper } from '../../infraestructure';
+import Mask from '../../infraestructure/mask';
+
 import style from './text.style.scss';
 
 export default class TextComponent {
@@ -51,6 +53,35 @@ export default class TextComponent {
 
                 localStorageWraper.setItem("lat-lng", JSON.stringify({ lat, lng }));
             });
+        }
+
+        if (this.options.mask) {
+            this.elements.input.addEventListener('input', (e) => this.onChange(e));
+            this.elements.input.addEventListener('keydown', (e) => this.onChange(e));
+            this.elements.input.addEventListener('cut', (e) => this.onChange(e));
+            this.elements.input.addEventListener('copy', (e) => this.onChange(e));
+            this.elements.input.addEventListener('paste', (e) => this.onChange(e));
+        }
+    }
+
+    onChange(evt) {
+        let input = this.elements.input;
+
+        let value = input.value.replace(/[^\d+]/g, '');
+
+        try {
+            var e = (evt.which) ? evt.which : event.keyCode;
+            if (e == 46 || e == 8) {
+
+                input.value = '';
+                return;
+            }
+        } catch (e1) { }
+
+        let newValue = new Mask(this.options.mask).mask(value);
+
+        if (newValue) {
+            input.value = newValue;
         }
     }
 

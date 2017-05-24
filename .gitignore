@@ -26,3 +26,4 @@ jspm_packages/
 dist/
 
 walnutjs-test/
+test/results.json
