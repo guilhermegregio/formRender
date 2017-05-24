@@ -22,6 +22,11 @@
                     "key": "ButtonSave",
                     "type": "id",
                     "value": "btnSave"
+                },
+                {
+                    "key": "MessageLog",
+                    "type": "id",
+                    "value": "message-log"
                 }
             ]
         }

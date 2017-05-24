@@ -20,7 +20,7 @@ export default class DefaultSubmit {
     valid() {
         let components = ComponentRegister.getRegister().components;
 
-        let valid = components.reduce((prevVal, component) => prevVal && component.validate(), true);
+        let valid = components.map(component => component.validate()).reduce((prevVal, value) => prevVal && value, true);
 
         return components.length !== 0 && valid;
     }

@@ -19,9 +19,15 @@
       },
       {
         "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
       }
     ],
-    "duration": 9530317955
+    "duration": 7954517779
   },
   {
     "description": "I want save form page with invalid data",
@@ -40,8 +46,14 @@
       },
       {
         "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
       }
     ],
-    "duration": 7276570992
+    "duration": 5515119238
   }
 ]

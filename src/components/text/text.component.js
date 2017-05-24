@@ -68,7 +68,13 @@ export default class TextComponent {
 
         let er = buildRegExpByMask(this.options.mask);
 
-        return er.test(this.elements.input.value);
+        let valid = er.test(this.elements.input.value);
+
+        if (!valid) {
+            this.elements.root.classList.add('invalid');
+        }
+
+        return valid;
     }
 
     getKey() {

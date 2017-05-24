@@ -42,3 +42,42 @@ h2 small {
     position: relative;
     margin-bottom: 45px;
 }
+
+.message-log {
+    display: none;
+    margin: 0;
+    position: fixed;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.message-log.success {
+    display: block;
+    background-color: rgba(10, 80, 0, 0.9);
+    color: #fff;
+}
+
+.message-log.error {
+    display: block;
+    background-color: rgba(255, 150, 150, 0.9);
+}
+
+.message-log .close {
+    text-align: right;
+}
+
+.message-log .link {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.message-log .link:focus {
+    outline: none;
+}
